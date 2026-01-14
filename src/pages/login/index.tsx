@@ -1,14 +1,15 @@
-import { Button, Form, Input } from "antd";
-import { login } from "../../services/auth.service";
+import { Button, Form, Input } from 'antd';
+
+import { login } from '../../services/auth.service';
 
 function LoginPage() {
   const handleFinish = async (values: any) => {
-    console.log("Received values:", values);
+    console.log('Received values:', values);
     try {
       const res = await login(values);
-      console.log("Login successful:", res);
+      console.log('Login successful:', res);
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error('Login failed:', error);
     }
   };
   return (
@@ -22,7 +23,9 @@ function LoginPage() {
           <Input.Password />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit">Login</Button>
+          <Button type="primary" htmlType="submit">
+            Login
+          </Button>
         </Form.Item>
       </Form>
     </div>
