@@ -69,6 +69,7 @@ export default defineConfig([
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       'unused-imports/no-unused-imports': 'error',
+      'react/no-unknown-property': 'warn',
       'unused-imports/no-unused-vars': [
         'error',
         {
