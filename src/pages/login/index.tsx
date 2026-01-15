@@ -1,13 +1,18 @@
 import { Button, Form, Input } from 'antd';
 import { login } from '../../services/auth.service';
 import { handleErrorMessage } from '../../utils/utils';
+import { useNavigate } from 'react-router-dom';
+import { useAuthStore } from '../../stores/auth.store';
 
 function LoginPage() {
+  const navigate = useNavigate();
+  const {setTokens, setRefreshToken} = useAuthStore.getState();
   const handleFinish = async (values: any) => {
-    console.log('Received values:', values);
     try {
       const res = await login(values);
-      console.log('Login successful:', res);
+      setTokens(res.token);
+      setRefreshToken(res.refreshToken);
+      navigate('/');
     } catch (error) {
       handleErrorMessage(error);
     }

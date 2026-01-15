@@ -1,4 +1,3 @@
-// features/auth/auth.store.ts
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
@@ -33,9 +32,8 @@ export const useAuthStore = create<AuthState>()(
         }),
     }),
     {
-      name: "auth-storage", // key trong localStorage
+      name: "auth-storage",
 
-      // 👇 cực kỳ quan trọng
       onRehydrateStorage: () => (state) => {
         if (state) {
           state.hasHydrated = true;
