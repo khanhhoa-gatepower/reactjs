@@ -37,6 +37,7 @@ export default defineConfig([
     settings: {
       react: {
         version: 'detect',
+        jsxRuntime: 'automatic',
       },
     },
 
@@ -51,6 +52,7 @@ export default defineConfig([
 
     rules: {
       'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
@@ -58,7 +60,7 @@ export default defineConfig([
       'unused-imports/no-unused-vars': [
         'error',
         {
-          vars: 'all', // 👈 BẮT BUỘC
+          vars: 'all',
           varsIgnorePattern: '^_',
           args: 'after-used',
           argsIgnorePattern: '^_',
