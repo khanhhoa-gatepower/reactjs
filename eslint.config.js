@@ -79,13 +79,7 @@ export default defineConfig([
           argsIgnorePattern: '^_',
         },
       ],
-      'import/order': [
-        'warn',
-        {
-          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-          'newlines-between': 'always',
-        },
-      ],
+      'import/order': ['off'],
     },
   },
 ]);

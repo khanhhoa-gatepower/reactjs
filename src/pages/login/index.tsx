@@ -1,8 +1,8 @@
 import { Button, Form, Input } from 'antd';
-import { login } from '../../services/auth.service';
-import { handleErrorMessage } from '../../utils/utils';
 import { useNavigate } from 'react-router-dom';
+import { login } from '../../services/auth.service';
 import { useAuthStore } from '../../stores/auth.store';
+import { handleErrorMessage } from '../../utils/utils';
 
 function LoginPage() {
   const navigate = useNavigate();
