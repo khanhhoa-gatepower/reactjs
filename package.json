@@ -52,6 +52,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
+    "sass-embedded": "^1.97.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "npm:rolldown-vite@7.2.5"

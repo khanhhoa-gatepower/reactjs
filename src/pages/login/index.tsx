@@ -20,7 +20,7 @@ function LoginPage() {
   return (
     <div>
       <h1>Login Page</h1>
-      <Form onFinish={handleFinish}>
+      <Form onFinish={handleFinish} className='login-form'>
         <Form.Item label="email" name="email">
           <Input />
         </Form.Item>
