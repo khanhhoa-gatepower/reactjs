@@ -1,6 +1,6 @@
 import { Button, Form, Input } from 'antd';
-
 import { login } from '../../services/auth.service';
+import { handleErrorMessage } from '../../utils/utils';
 
 function LoginPage() {
   const handleFinish = async (values: any) => {
@@ -9,7 +9,7 @@ function LoginPage() {
       const res = await login(values);
       console.log('Login successful:', res);
     } catch (error) {
-      console.error('Login failed:', error);
+      handleErrorMessage(error);
     }
   };
   return (
