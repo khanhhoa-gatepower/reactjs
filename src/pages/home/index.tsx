@@ -1,9 +1,11 @@
 import React from 'react';
 
 function HomePage() {
-  const a: any = 1;
-  console.log(a);
-  return <div>HomePage oke</div>;
+  return (
+    <div>
+      <h1>HomePage</h1>
+    </div>
+  );
 }
 
 export default HomePage;

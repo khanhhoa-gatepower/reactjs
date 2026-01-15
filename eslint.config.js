@@ -20,6 +20,11 @@ export default defineConfig([
       sourceType: 'module',
       globals: globals.browser,
       parser: tseslint.parser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
 
     plugins: {
@@ -38,7 +43,7 @@ export default defineConfig([
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      react.configs.flat.recommended, // ✅ QUAN TRỌNG
+      react.configs.flat.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
       prettier,
@@ -46,26 +51,23 @@ export default defineConfig([
 
     rules: {
       'react/react-in-jsx-scope': 'off',
-
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
-
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' },
+        'error',
+        {
+          vars: 'all', // 👈 BẮT BUỘC
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+        },
       ],
-
       'import/order': [
         'warn',
         {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-          ],
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
           'newlines-between': 'always',
         },
       ],
