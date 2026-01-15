@@ -51,6 +51,18 @@ export default defineConfig([
     ],
 
     rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          paths: [
+            {
+              name: 'react',
+              importNames: ['default'],
+              message: 'Do not import React. Use automatic JSX runtime.',
+            },
+          ],
+        },
+      ],
       'react/react-in-jsx-scope': 'off',
       'react/jsx-uses-react': 'off',
       'no-unused-vars': 'off',
