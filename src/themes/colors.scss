@@ -1,0 +1,29 @@
+/* src/styles/theme.css */
+@import 'tailwindcss';
+
+@theme {
+  /* Blue scale */
+  --color-blue-500: #2563eb;
+  --color-blue-600: #1d4ed8;
+
+  /* Gray */
+  --color-gray-100: #f5f5f5;
+  --color-gray-900: #111827;
+
+  /* Red */
+  --color-red-500: #ef4444;
+
+  /* Green */
+  --color-green-300: #4ade80;
+  --color-green-400: #22c55e;
+  --color-green-600: #15803d;
+  --color-green-25: #f0fdf4;
+
+  /* Blue gray */
+  --color-blue-gray-300: #94a3b8;
+  --color-blue-gray-50: #f1f5f9;
+  --color-blue-gray-200: #cbd5e1;
+  --color-blue-gray-700: #1e293b;
+  --color-blue-gray-800: #0f172a;
+  --color-blue-gray-400: #64748b;
+}
