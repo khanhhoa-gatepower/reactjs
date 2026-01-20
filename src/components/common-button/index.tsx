@@ -7,10 +7,13 @@ interface IButtonProps extends ButtonProps {
 
 function CommonButton({ className, noBorder, children, ...rest }: IButtonProps) {
   return (
-    <AntButton className={`button-default ${className ?? ''} ${noBorder ? 'noBorder' : ''}`} {...rest}>
-        {children}
-      </AntButton>
-  )
+    <AntButton
+      className={`common-button ${className ?? ''} ${noBorder ? 'noBorder' : ''}`}
+      {...rest}
+    >
+      {children}
+    </AntButton>
+  );
 }
 
-export default CommonButton
+export default CommonButton;

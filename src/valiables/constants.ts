@@ -1,12 +1,12 @@
 export const configStyleComponent = {
   Button: {
-    colorPrimary: '#266D26',
+    colorPrimary: '#22C55E',
     contentFontSize: 16,
-    controlHeight: 40,
-    colorPrimaryHover: '#266D26',
-    colorPrimaryActive: '#266D26',
-    borderRadius: 12,
-    defaultColor: '#266D26',
+    controlHeight: 36,
+    colorPrimaryHover: '#22C55E',
+    colorPrimaryActive: '#22C55E',
+    borderRadius: 8,
+    defaultColor: '#22C55E',
     defaultBorderColor: 'transparent',
     defaultHoverBorderColor: 'transparent',
   },
@@ -14,9 +14,9 @@ export const configStyleComponent = {
   Input: {
     algorithm: true,
     paddingBlock: 7,
-    hoverBorderColor: '#266D26',
-    colorPrimaryActive: '#266D26',
-    colorPrimary: '#266D26',
+    hoverBorderColor: '#94A3B8',
+    colorPrimaryActive: '#94A3B8',
+    colorPrimary: '#94A3B8',
     activeShadow: 'none',
   },
 
