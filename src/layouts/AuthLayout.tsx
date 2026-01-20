@@ -1,8 +1,12 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+import AuthHeader from '../components/auth-header';
+import './Layout.scss';
 
 export const AuthLayout = () => {
-    return <div className="auth-layout">
-        <h1 className="text-red-500">Auth Layout</h1>
-        <Outlet />
-    </div>;
-}
+  return (
+    <div className="auth-layout">
+      <AuthHeader />
+      <Outlet />
+    </div>
+  );
+};
